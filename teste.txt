@@ -1,0 +1,10 @@
+def fatorial( n ) = \
+    if n == 0 then 1; \
+    else n * fatorial( n - 1 ); \
+;
+
+let fat( n ) = if n == 0 then 1; else n * fat( n - 1 ); ;
+
+fatorial( 4 )
+fat( 5 )
+sair
