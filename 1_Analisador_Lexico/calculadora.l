@@ -20,12 +20,17 @@ SAIDAS "sair"|"exit"|"halt"|"quit"|"fim"
 {SAIDAS} { } // return 0; }
 
  /* comparison ops, all are a CMP token */ 
-">"     { yylval.fn = 1; } // return CMP; }
-"<"     { yylval.fn = 2; } // return CMP; }
-"<>"    { yylval.fn = 3; } // return CMP; }
-"=="    { yylval.fn = 4; } // return CMP; }
-">="    { yylval.fn = 5; } // return CMP; }
-"<="    { yylval.fn = 6; } // return CMP; }
+">"     { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 1; } // return CMP; }
+"<"     { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 2; } // return CMP; }
+"<>"    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 3; } // return CMP; }
+"=="    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 4; } // return CMP; }
+">="    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 5; } // return CMP; }
+"<="    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 6; } // return CMP; }
+
+"+"    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 6; } // return CMP; }
+"-"    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 6; } // return CMP; }
+"/"    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 6; } // return CMP; }
+"*"    { printf("Simbolo Especial -> %s \n", yytext);yylval.fn = 6; } // return CMP; }
 
  /* keywords */
 
@@ -81,7 +86,7 @@ SAIDAS "sair"|"exit"|"halt"|"quit"|"fim"
 "logico" 					{ printf("Tipo de Variavel -> %s \n", yytext); } // return LOGICO; }
 "pausa" 					{ printf("Palavra Reservada -> %s \n", yytext); } // return PAUSA; }
 "verdadeiro" 				{ printf("Palavra Reservada -> %s \n", yytext); } // return VERDADEIRO; }
-"escreva" 				{ printf("Palavra Reservada -> %s \n", yytext); } // return VERDADEIRO; }
+"escreva" 					{ printf("Palavra Reservada -> %s \n", yytext); } // return VERDADEIRO; }
 
 
 ","							{printf("Caracter Especial -> %s \n", yytext);}
