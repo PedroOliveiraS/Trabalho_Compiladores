@@ -7,7 +7,7 @@ run: compilar
 	./${PROG}.exe
 
 compilar: clean parser scanner
-	gcc ${PROG}.yy.c ${PROG}.tab.c ${PROG}.c -o ${PROG}.exe -ll -lc -lm
+	gcc ${PROG}.yy.c ${PROG}.tab.c ${PROG}.c -o scanner.exe -ll -lc -lm
 	
 parser:
 	bison -d ${PROG}.y
