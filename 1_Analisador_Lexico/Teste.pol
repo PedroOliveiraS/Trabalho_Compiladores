@@ -1,0 +1,24 @@
+algoritmo "Exemplo"
+var
+    x1: inteiro
+    r : real
+inicio
+    escreva("Holla Mundo ");
+    x1 <- 2;
+    se x1 < 1 entao
+        x1 <- 1;
+    senao 
+        r <- 1;
+        
+        
+        
+        
+        {}
+        /*  */
+        
+        //
+        
+        ººªªº
+        
+    fimse
+fimalgoritmo
