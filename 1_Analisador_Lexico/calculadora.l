@@ -99,34 +99,6 @@ SAIDAS "sair"|"exit"|"halt"|"quit"|"fim"
 \"	 						{printf("Caracter Especial -> %s \n", yytext);}
 
 
- /* debug hack */
-"debug"[0-9]+ { debug = atoi(&yytext[5]); 
-	            if ( debug == 0 ) 
-	            	printf("debug disabled\n");
-	            else 
-	            	printf("debug set to %d\n", debug);
-	        }
-
-"show" { 
-		    printf("[DEBUG] NHASH = %d\n", NHASH);
-		    int i = 0;
-		    for (i = 0; i < NHASH; i++) {
-		    	if ( symtab[i].name != NULL ) {
-		    		printf("symtab[%4d] = (%s, %lf, %d, %s)\n", 
-		    			i, 
-		    			symtab[i].name, 
-		    			symtab[i].value, 
-		    			(symtab[i].func != NULL ? symtab[i].func->nodetype : 0), 
-		    			(symtab[i].syms != NULL ? getsymbols( symtab[i].syms ) : "[]" )
-		    			);
-		    	} 
-		    	// printf("symtab[%4d] = ...\n", i);
-		    }
-		    printf("===============\n");
-		}
-
- /* names */
-
 \".*\"  { yylval.s = lookup(yytext); printf("String -> %s \n", yytext) ;} // return NAME; }
 
 [a-zA-Z][a-zA-Z0-9]*[ ]<- { yylval.s = lookup(yytext); printf("Atribuição -> %s \n", yytext) ;} // return NAME; }
