@@ -1,0 +1,18 @@
+algoritmo "Exemplo_4"
+var
+
+    funcao multiplicacao(x,y : real): real
+    inicio
+
+        retorne x * y
+
+    fimfuncao
+
+    resp : real
+
+inicio
+    
+    resp <- multiplicacao(5,5)
+    escreva(resp)
+    
+fimalgoritmo

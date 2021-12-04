@@ -1,0 +1,22 @@
+algoritmo "Exemplo_1"
+var
+    
+    i : logico
+
+    procedimento 
+inicio
+    
+    i <- verdadeiro
+
+
+    escolha i
+    caso verdadeiro
+        escreva("verdade")
+
+    outrocaso 
+        escreva("falso")
+
+
+    fimescolha   
+    
+fimalgoritmo

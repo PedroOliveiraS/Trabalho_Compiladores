@@ -1,0 +1,18 @@
+algoritmo "Exemplo_3"
+var
+
+    res: real
+
+    procedimento soma(x,y : inteiro)
+    inicio
+
+        res <- x + y
+
+    fimprocedimento
+
+inicio
+    
+    soma(5,6) 
+    escreva(res)
+    
+fimalgoritmo

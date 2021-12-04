@@ -1,0 +1,40 @@
+algoritmo "Exemplo_4"
+var
+
+    x,y,z : inteiro
+
+inicio
+    
+    leia(x)
+    y <- 0
+    z <- 0
+
+    se x > 10 entao
+
+        repita
+
+            x <- x - 1
+            y <- y + x
+
+        ate x < 1
+
+
+    senao 
+
+        enquanto x < 10 faca
+
+            x <- x + 1
+            z <- z + x + 1
+
+        fimenquanto
+
+    fimse
+
+
+    se y > z entao
+        escreva("y é maior")
+    senao
+        escreva("z é maior")
+    fimse
+    
+fimalgoritmo
