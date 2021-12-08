@@ -89,7 +89,7 @@ IDENTIFICADOR						{LETRAS__}+{LETRAS__|NUM__}*
 
 [0-9]+"."[0-9]+{EXP}? 				{yylval.Valor_Double = atof(yytext); return NUM_DOUBLE;}
 
-{IDENTIFICADOR} 					{yylval.Nome = yytext ;return ID;}
+[a-zA-Z0-9]+ 						{strcpy(yylval.Nome, yytext) ;return ID;}
 
 \".*\"								{ yylval.Valor_String = yytext;return STRING; }
 
@@ -100,8 +100,6 @@ IDENTIFICADOR						{LETRAS__}+{LETRAS__|NUM__}*
 .      								{ char buffer[1024];sprintf(buffer, "Caracter invalido: %c\n", *yytext);yyerror(buffer);}
 
 \\\n  								{ printf("c> "); } 
-
-.     								{ yyerror("Caracter invalido: %c\n", *yytext); }
 
 %%
 
